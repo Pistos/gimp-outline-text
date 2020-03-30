@@ -2,7 +2,7 @@
 
 from gimpfu import *
 
-def outline_text(image, layer, outline_size) :
+def outline_text(image, layer, outline_size, layer_opacity) :
     gimp.progress_init("Outlining text on layer '" + layer.name + "'...")
 
     pdb.gimp_undo_push_group_start(image)
@@ -13,7 +13,6 @@ def outline_text(image, layer, outline_size) :
 
     pdb.gimp_selection_grow(image, outline_size)
 
-    layer_opacity = 100
     new_layer = pdb.gimp_layer_new(
         image,
         pdb.gimp_image_width(image),
@@ -35,17 +34,18 @@ def outline_text(image, layer, outline_size) :
 
 register(
     "python_fu_outline_text",
-    "Outlines text",
-    "Outlines text with a feathered outline using the current background colour.  Version 1.0.0",
+    "Outline text with background colour",
+    "Outlines text with a feathered outline using the current background colour.  Version 1.1.0",
     "Pistos",
     "Pistos",
-    "2016",
+    "2016-2020",
     "Outline Text...",
     "*",
     [
         (PF_IMAGE, "image", "Input image", None),
         (PF_DRAWABLE, "drawable", "Input layer", None),
-        (PF_INT, "outline_size", "Size of outline (in pixels):", 10)
+        (PF_INT, "outline_size", "Size of outline (in pixels):", 10),
+        (PF_INT, "layer_opacity", "Opacity of new layer (in percent):", 70)
     ],
     [],
     outline_text,

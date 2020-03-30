@@ -5,11 +5,12 @@ the current background colour.
 
 ## Installation
 
-1. Copy (or symlink) `pistos-outline-text.py` to `~/.gimp-2.8/plug-ins`.
+1. Copy (or symlink) `pistos-outline-text.py` to `~/.config/GIMP/2.10/plug-ins`.
 1. (Re)start GIMP.
 
 ## Usage
 
 1. In the menus: Filters | Light and Shadow | Outline Text
 1. Specify the size of the outline in pixels.
+1. Specify the opacity of the outline layer.
 1. Marvel.
