@@ -5,7 +5,7 @@ the current background colour.
 
 ## Installation
 
-1. Copy (or symlink) `pistos-outline-text.py` to `~/.config/GIMP/2.10/plug-ins`.
+1. Copy (or symlink) `pistos-outline-text.scm` to `~/.config/GIMP/2.10/plug-ins`.
 1. (Re)start GIMP.
 
 ## Usage
